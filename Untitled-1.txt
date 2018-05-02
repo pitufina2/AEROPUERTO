@@ -1,0 +1,46 @@
+
+
+<?php
+
+array_unshift
+
+(PHP 4, PHP 5, PHP 7)
+
+array_unshift — Añadir al inicio de un array uno a más elementos
+Descripción ¶
+int array_unshift ( array &$array , mixed $value1 [, mixed $... ] )
+
+array_unshift() añade los elementos pasados al inicio de array. Observe que la lista de elementos se añade como un todo, por lo que los elementos añadidos permanecen en el mismo orden. Todas las claves numéricas del array serán modificadas empezando a contar desde cero mientras que las claves literales no se tocan.
+Parámetros ¶
+
+array
+
+    El array de entrada.
+value1
+
+    El primer valor a añadir al inicio.
+
+Valores devueltos ¶
+
+Devuelve el nuevo número de elementos del array.
+
+
+
+
+
+
+$cola = array("naranja", "banana");
+array_unshift($cola, "manzana", "frambuesa");
+print_r($cola);
+?>
+
+El resultado del ejemplo sería:
+
+Array
+(
+    [0] => manzana
+    [1] => frambuesa
+    [2] => naranja
+    [3] => banana
+)
+
